@@ -1,0 +1,479 @@
+html,body{
+  font-size: 100%;
+  min-width: 500px;
+  overflow: visible;
+}
+
+.open{
+  display: block;
+}
+.close_left_menu{
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.side_right_header{
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: grey;
+}
+.tablet_head{
+  cursor: pointer;
+}
+.span_ok{
+  color: grey;
+}
+.left_menu_photo{
+  height: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.photo_createry{
+  list-style-type: none;
+  margin: 20px;
+  padding-left: 0;
+}
+.thumb{
+  width: 150px;
+  height: 150px;
+}
+.photo_icon_trash{
+  position: absolute;
+  top:5px;
+  margin-left: 130px;
+}
+.btn_save_changes{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.photo_icon_reverse{
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 130px;
+}
+
+.head{
+  background-color: #319dd4;
+  color: white;
+}
+.head_item{
+  margin-top: 17px;
+  height: 77%;
+  cursor: pointer;
+}
+.head_item:hover{
+  border-bottom: 4px solid white;
+}
+.head_btn{
+  float: left;
+  margin-top: 1.2rem;
+  padding-right:0;
+  padding-left: 0;
+}
+.head_cont{
+  height: 70px;
+  padding-left: 40px;
+  text-align: center;
+}
+
+.photo_user_cont{
+  height: 15rem;
+  background: white;
+  margin-bottom:20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.photo_user_info{
+  padding: 0.8rem;
+}
+.photo_user_info_item{
+  list-style-type: none;
+}
+img.photo_user{
+  width: 100%;
+  height: 11rem;
+  margin: 0;
+  padding: 0;
+}
+.photo_conteiner{
+  margin-top: 1.3rem;
+}
+#photoedit_conteiner{
+  min-height: 600px;
+}
+.edit_image{
+  min-height:400px ;
+  margin: 20px;
+  width: 100%;
+}
+.btn_edit_photo{
+  background: #319dd4;
+  color: white;
+}
+.btn_group_edit_photo{
+  margin-bottom: 20px;
+}
+.photo_text{
+  position: absolute;
+  left: 0;
+  bottom: 30%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: white;
+  font-size: 17px;
+}
+.photo_list{
+  padding-left: 20px;
+}
+.photo_text_label{
+  position: absolute;
+  right: 20px;
+}
+.sidebar_block{
+  margin-top: 1.3rem;
+}
+li.sidebar_item{
+  margin: 5px;
+  list-style-type: none;
+}
+
+a.sidebar_a{
+  color: black;
+}
+a.sidebar_a:hover{
+  font-size: 0.95rem;
+  color: #00b3ee;
+  text-decoration: none;
+}
+.sidebar_nav{
+  min-width: 200px;
+  font-size: 14px;
+}
+.sidelist{
+  margin: 0;
+  padding: 0;
+}
+.small_icon_trash{
+  font-size: 15px;
+  padding-left: 20%;
+  padding-top: 0;
+}
+.main_page{
+  background: gainsboro;
+}
+.welcome{
+  padding-left: 7px;
+}
+.logo_img{
+  width: 12rem;
+  height: 60px;
+}
+.logo_text{
+  margin-left: 7px;
+}
+.logo_conteiner{
+  margin-left: 20px;
+  text-align: center;
+}
+
+.following{
+  margin-top: 25px;
+  background-color: #eb9316;
+  width: 100%;
+  color: #fff;
+}
+.following:hover{
+  background: red;
+  color: #fff;
+}
+.following:active{
+  background: red;
+  color: #fff;
+}
+.deposit{
+  background: #319dd4;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 100%;
+}
+.deposit:hover{
+  background-color: #fff;
+  color: #319dd4;
+}
+.deposit:active{
+  background: #319dd4;
+  color: #fff;
+}
+#tablet_head_menu{
+  height: 4rem;
+  font-size: 2rem;
+  padding-left: 1rem;
+  display: none;
+}
+.tablet_head{
+  margin-top: 1rem;
+}
+.tablet_menu_icon{
+  margin: 1rem;
+}
+.error{
+  color: red;
+  font-size: 12px;
+  font-family: Helvetica;
+  min-height: 20px;
+}
+.is_exist{
+  margin-left: 15px;
+  font-size: 1rem;
+}
+
+.lb_min{
+ font-size: 10px;
+}
+
+.lb{
+  font-size: 15px;
+}
+.start_form{
+  background-image: url("../images/background.jpg");
+  min-height: 500px;
+  text-align: center;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  display: table;
+  width:100%;
+}
+
+.child {
+  text-align:left;
+  margin-top: 5%;
+}
+label{
+  text-align: left;
+
+}
+.header_manager_panel{
+  background: #228B22;
+  height: 4rem;
+}
+.table_users{
+  margin-left: 10px;
+}
+.block_my_photo{
+  width: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  color: grey;
+}
+
+.create_user_btn{
+  width: 100%;
+  height: 3rem;
+  margin-top: 0.5rem;
+  background: #228B22;
+  color: white;
+  border: 1px solid white;
+}
+.username_admin_panel{
+  margin-top: 1.4rem;
+  height: 1rem;
+  color: white;
+  text-align: left;
+}
+
+.footer{
+  margin-top: 9rem;
+}
+
+.label_mes{
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  font-size: 0.9rem;
+  background: coral;
+}
+
+.footer_view_profile{
+  background: #c1e2f2;
+}
+.footer_view_profile_btn{
+  border: 1px solid #319dd4;
+  color: #319dd4;
+  background: #c1e2f2;
+  font-size: 15px;
+}
+.footer_view_profile_btn:hover{
+  background: #319dd4;
+  color: white;
+}
+.img_view_profile{
+  width: 100%;
+  height: 20rem;
+}
+.btn_group_view_profile{
+  margin: 1rem;
+  color: white;
+  font-size: 15px;
+}
+.info_block_view_profile{
+  margin-bottom: 3rem;
+}
+.table_view_profile{
+  font-size: 0.9rem;
+}
+
+.btn_converse{
+  background: coral;
+}
+.span_list_interests{
+  color: #319dd4;
+  font-size: 12px;
+}
+
+.nav_panel{
+  min-height: 100px;
+  height: 1px;
+  margin-left: 10px;
+  max-width: 400px;
+  float: left;
+}
+.manager_panel{
+  min-height: 100px;
+  height: 1px;
+  float: left;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.desktop_left_cont{
+  border-radius: 10px;
+  background-color: white;
+}
+.main_container{
+  background-color: gray;
+}
+.logo{
+  margin-left: 7rem;
+}
+
+
+#img_search{
+  width: 25px;
+  height: 25px;
+}
+.img_icon{
+  width: 18px;
+  height: 18px;
+}
+#mobile_profile{
+  display: none;
+}
+.mobile_info_block{
+  position: absolute;
+  top: 23rem;
+  left: 1rem;
+  color: white;
+}
+.div_info_mobile{
+  background: white;
+  color: black;
+  width: 100%;
+}
+.info_conteiner{
+  padding-top: 10px;
+  margin-left: 20px;
+}
+.title_edit_photo_profile{
+  background: grey;
+  color: white;
+  text-align: center;
+}
+.container_body_photo_edit{
+  width: 100%;
+  height: 3rem;
+  background: #319dd4;
+  color: white;
+}
+.online{
+  color: limegreen;
+}
+.offline{
+  color: grey;
+}
+.my_photo{
+  width: 100%;
+  height: 100%;
+}
+.block_my_photo_main{
+  width: 3rem;
+  height: 3rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+#logotip{
+  cursor: pointer;
+}
+/*Media*/
+@media screen and (max-width: 768px){
+  .logo_conteiner{
+    margin-left: 20px;
+    text-align: center;
+  }
+  .form_field{
+    margin-top: 15px;
+  }
+  #login{
+    display: none;
+  }
+  #mobile_profile{
+    display: block;
+  }
+  #view_profile{
+    display: none;
+  }
+  .img_view_profile{
+    height:25rem;
+  }
+
+}
+@media screen and (min-width: 769px){
+  #profile{
+    display: none;
+  }
+
+}
+@media screen and (max-width: 1306px){
+
+}
+@media screen and (max-width: 991px){
+  .photo_conteiner{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .logo{
+    margin-left: 8px;
+  }
+  .main_logo{
+    display: none;
+  }
+  #user_info,#head_menu,#sidebar_desktop{
+    display: none;
+  }
+  #tablet_head_menu{
+    display: block;
+  }
+  /*.footer{*/
+    /*margin-top: 8rem;*/
+  /*}*/
+}
+

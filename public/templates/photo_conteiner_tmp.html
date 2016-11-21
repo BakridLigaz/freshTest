@@ -1,0 +1,17 @@
+<div class="col-md-8 col-sm-11 col-xs-11 photo_conteiner row" id="photo_container" >
+    <div class="col-md-12 col-sm-12"><h4>HIGHLIGHTS TO DAY</h4></div>
+    <div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="user in current.users"><div class="photo_user_cont" ng-click="showProfile(user)">
+        <div class="photo_text">
+            <ul class="photo_list">
+                <li class="photo_user_info_item">{{user.username| capitalize}}</li>
+                <li class="photo_user_info_item">{{user.birthday| now_age }}<span class="photo_text_label"><img src="../icons/chat_talk_speak.png" class="img_icon">cheater</span></li>
+            </ul>
+        </div>
+        <img  ng-src-function="{{user.id}}" state="{{user.state}}" class="photo_user" >
+        <ul class="photo_user_info list-group">
+            <li class="photo_user_info_item">{{user.looking_for}}<span class="pull-right" ng-class="user.status?'online':'offline'">&#9899;  </span></li>
+            <li class="photo_user_info_item">{{user.city}}<span class="pull-right glyphicon glyphicon-camera"></span></li>
+        </ul>
+    </div>
+    </div>
+</div>

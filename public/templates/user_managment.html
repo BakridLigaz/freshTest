@@ -1,0 +1,49 @@
+<div>
+    <div class=" header_manager_panel row">
+        <div class="col-md-3 col-md-offset-9 row">
+            <div class="col-md-5">
+                <button class="create_user_btn"><span class="glyphicon glyphicon-plus"></span>create</button>
+            </div>
+            <div class=" col-md-2">
+                <div class="block_my_photo">
+                    <img ng-src-function="{{current.user.id}}" state="{{current.user.state}}" class="my_photo" ng-click="showProfile(current.user)">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="username_admin_panel">
+                {{current.user.username}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9 col-sm-9 col-xs-12">
+    <table class="table table-bordered table_users">
+        <thead>
+        <tr>
+            <th>User</th>
+            <th>User role</th>
+            <th>Save changes</th>
+            <th>Delete user</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in userList| orderBy: user.username">
+            <td>{{user.username}}</td>
+            <td>
+                <select class="form-control" ng-model="user.role" ng-disabled="current.user.role=='Moderator'&&current.user.id!=user.id">
+                    <option>User</option>
+                    <option>Moderator</option>
+                    <option>Administrator</option>
+                </select>
+            </td>
+            <td><a ng-click="updateRole(user.role,current.user.id,user.id)" ng-disabled-changed="" adminid="{{current.user.id}}" userid="{{user.id}}" role="{{current.user.role}}" style="cursor: pointer">Save changes</a></td>
+            <td><a href="" ng-click="deleteUser(user.id)" admin="{{current.user.id}}" user="{{user.id}}" ng-disabled-delete="">Delete user</a></td>
+        </tr>
+        </tbody>
+    </table>
+        </div>
+    </div>
+</div>
+
+</div>

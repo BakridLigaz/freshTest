@@ -1,0 +1,36 @@
+<aside-menu id="left" side="left" width="450px" is-backdorp="false" push-content="false" class="aside-menu_left">
+    <div>
+        <div class="row">
+            <div class="left_menu_photo col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+                <img ng-src-function="{{current.user.id}}" state="{{current.user.state}}" class="my_photo">
+            </div>
+            <div class="col-sm-1 col-sm-offset-2 col-xs-1 col-xs-offset-2" aside-menu-toggle="left">
+                <span class="glyphicon glyphicon-remove close_left_menu" ></span>
+            </div>
+        </div>
+        <ul class="list-group user_left_menu">
+            <li class="right_menu_item"><div style="text-align: center">Configuration<span class="glyphicon glyphicon-cog"></span></div></li>
+            <div class="right_menu_group">
+                <li class="right_menu_item"><div class="right_menu_item_div">Recomended<span class = "label label-default pull-right">0</span></div></li>
+                <li class="right_menu_item"><div class="right_menu_item_div" aside-menu-toggle="right">conversations<span class = "label label-default pull-right">0</span></div></li>
+                <li class="right_menu_item"><div class="right_menu_item_div">I like<span class = "label label-default pull-right">0</span></div></li>
+            </div>
+            <div class="right_menu_group">
+                <li class="right_menu_item"><div class="right_menu_item_div">Les gusto<span class = "label label-default pull-right">0</span></div></li>
+                <li class="right_menu_item"><div class="right_menu_item_div">Muntual interest<span class = "label label-default pull-right">0</span></div></li>
+            </div>
+            <div class="right_menu_group">
+                <li class="right_menu_item"><div class="right_menu_item_div">I vivsted<span class = "label label-default pull-right">0</span></div></li>
+                <li class="right_menu_item"><div class="right_menu_item_div">Search singles</div></li>
+            </div>
+            <div class="right_menu_group">
+                <li class="right_menu_item"><div class="right_menu_item_div">New faces</div></li>
+                <li class="right_menu_item"><div class="right_menu_item_div">users Online</div></li>
+            </div>
+            <div class="right_menu_group">
+                <li class="right_menu_item"><div class="right_menu_item_div">birthday</div></li>
+                <li class="right_menu_item"><div class="right_menu_item_div">Chat rooms</div></li>
+            </div>
+        </ul>
+    </div>
+</aside-menu>

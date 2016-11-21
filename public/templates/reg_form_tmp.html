@@ -1,0 +1,179 @@
+<div ng-controller="RegCtrl">
+    <div class="start_form" ng-show="isFirst">
+        <div class="child">
+            <div class="row">
+                <div class="text-center col-md-12 col-md-offset-0 col-xs-8 col-xs-offset-2">
+                    <h1>Create your free profile</h1>
+                </div>
+                <form name="first_form" novalidate>
+                    <div class="row col-md-4 col-md-offset-1 col-sm-8 col-sm-offset-2 form_field col-xs-10 col-xs-offset-1">
+                        <div class="form-group col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0">
+                            <label class="lb">I am</label>
+                            <select class="form-control"  name="state" required ng-model="newUser.state">
+                                <option></option>
+                                <option>Men</option>
+                                <option>Woman</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 form_field">
+                            <label class="lb">I am looking for</label>
+                            <select class="form-control" name="looking_for" required ng-model="newUser.looking_for">
+                                <option></option>
+                                <option>Men</option>
+                                <option>Woman</option>
+                                <option>Chat</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                        <div class="form-group col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 form_field">
+                            <label class="lb">beetwen</label>
+                            <select class="form-control" name="age" required ng-model="newUser.age">
+                                <option></option>
+                                <option>18-24</option>
+                                <option>25-31</option>
+                                <option>32-38</option>
+                                <option>39-41</option>
+                                <option>42-45</option>
+                                <option>more 45</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 col-sm-4 form_field">
+                            <label class="lb">living in</label>
+                            <select class="form-control" ng-options="country.name for country  in countryList" ng-model="newUser.country" name="living" required >
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 col-sm-4">
+                            <button class="btn following" ng-click="nextPage(first_form)">Following</button>
+                        </div>
+                    </div>
+                    <div class="text-center col-md-12 col-md-offset-0 col-xs-8 col-xs-offset-2 footer">
+                        <h4>Join us to meet people! Today we are more than 900 000 registered</h4>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="start_form" ng-hide="isFirst">
+        <div class="child">
+            <div class="row">
+                <form name="second_form" novalidate>
+                <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <label >Name</label>
+                    <input type="text" class="form-control" name="username" required ng-model="newUser.username" ng-minlength="4" ng-unique="" ng-pattern="/^[a-zA-Z]{1,50}$/" ng-focus="blurname=false"/>
+                    <div class="error">
+                    <div ng-messages="second_form.username.$error" ng-show="second_form.username.$invalid&&blurname" >
+                        <div ng-message="unique">This name exists</div>
+                        <div ng-message="required">Field empty</div>
+                        <div ng-message="minlength">Min length name 4 character</div>
+                        <div ng-message="pattern">Incorrect name</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0  col-xs-10 col-xs-offset-1">
+                    <label >Email</label>
+                    <input type="email" class="form-control" required ng-model="newUser.email" ng-blur="bluremail=true" name="mail" ng-focus="bluremail=false" />
+                    <div class="error">
+                    <div ng-messages="second_form.mail.$error" ng-show="second_form.mail.$invalid&&bluremail">
+                        <div ng-message="required">Field empty</div>
+                        <div ng-message="email">Incorrect email</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <label >Password</label>
+                    <input type="password" class="form-control" required ng-model="newUser.password" name="pass" ng-minlength="4" ng-blur="blurpass=true" ng-focus="blurpass=false" />
+                    <div class="error">
+                    <div ng-messages="second_form.pass.$error" ng-show="second_form.pass.$invalid&&blurpass">
+                        <div ng-message="required">Field empty</div>
+                        <div ng-message="minlength">Password very short</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-0 row col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1" ng-date="">
+                    <label class=" col-md-12 col-sm-12 col-xs-12">Birthday</label>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <select class="form-control" id="dobday" required ng-model="newUser.birthday.day">
+                        </select>
+                        <div class="error"></div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <select class="form-control" id="dobmonth" required ng-model="newUser.birthday.month">
+                        </select>
+                        <div class="error"></div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <select class="form-control" id="dobyear" required ng-model="newUser.birthday.year">
+                        </select>
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <span class="clearfix"></span>
+                <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <label>Education level</label>
+                    <select class="form-control" ng-model="newUser.education">
+                        <option></option>
+                        <option>Basic</option>
+                        <option>Middle</option>
+                        <option>High</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                    <label>Children</label>
+                    <select class="form-control" ng-model="newUser.children">
+                        <option></option>
+                        <option>not</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>more 4</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <label >Country</label>
+                    <select ng-model="newUser.country" class="form-control" ng-options="country.name for country in countryList" required>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                    <label>City</label>
+                    <select class="form-control" ng-model="newUser.city">
+                        <option ></option>
+                        <option ng-repeat="city in newUser.country.cities">{{city}}</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <div class="checkbox col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <label><input type="checkbox" ng-model="accept"/>I accept <a href="#">Terms of Use</a></label>
+                </div>
+                <div class="form-group col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                    <button class="btn following" ng-click="follow(newUser)" ng-disabled="!accept||second_form.$invalid">Following</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row carousel-container" ng-show="true">
+        <div class="carousel-hider col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2" ng-carousel="" id="carousel_div">
+            <ul class="carousel-list" id="carousel">
+                <li class="carousel-element" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEz8biIRnjeGdvkbQ02M5bMWZloXEocbaLhXs07YAcoipmgoTV"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm0E3jtBAfFxOhPEKNqcdV0XhfwW1iDtzwHzIyEyjAQRvLDvdODg"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQGKjSTI4s6Zi4Ug1h6aG9e7onxkgpprVteZddm8fYU9aZO0X7QA"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQfVKixP6vfYlc1MZtqEv5skUxhmwWaMacPhUecsqnfQmYFXOekWg"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSKugxjZwNCVvUvBtcICywrs0uGqVVfYK0G-7mH-P8aipRP115E"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSRfWWn_S_J-9javZcQvSvZOfirIvkCtcc7ssnUV5Q6mjmyn0_c"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTsXoR22Hr7yAwbCdieINTSGQE-yRVfS6WGBPvfjxlo4Aon5Y8q"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTSZ3XntntadsmkSoAyZNQ_rfhKtsr03lVqgLizjjPWR_A1_NUn"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5RF5rLpaVryZsmDioERghbvRQLlV01iM2-08utn8lPiPExzhNjQ"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRVFTiudo5VsbM2Bf4176cWfoIy29uVmjgU5y74_-aUTrUuptb-"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcIeoq8YbDdAySpvWwtzgZ8Qsjo4J8rBQPU4VF_yIJ_GqQrSG19g"></li>
+                <li class="carousel-element"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRW3aPDtC1eVTEYgKlw8FkPQQEslQQEDxapd1fnwcpzktFIQ8UV"></li>
+            </ul>
+        </div>
+    </div>
+</div>

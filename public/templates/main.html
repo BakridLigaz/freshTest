@@ -1,0 +1,18 @@
+<aside-menu-content>
+<div>
+    <div class="head">
+        <div class="row" id="logo">
+            <div ng-include=" '../templates/logotip_tmp.html' "></div>
+            <div ng-include=" '../templates/head_menu_tmp.html'"></div>
+            <div ng-include="'../templates/tablet_head_menu.html'"></div>
+        </div>
+    </div>
+    <div class="row main_page">
+        <div ng-include="'../templates/sidebar_desktop_tmp.html'"></div>
+        <div app-view-segment="1"></div>
+    </div>
+</div>
+<div ng-include="'../templates/aside_menu_right.html'"></div>
+<div ng-include="'../templates/aside_menu_left.html'"></div>
+</aside-menu-content>
+

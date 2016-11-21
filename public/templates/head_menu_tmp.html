@@ -1,0 +1,25 @@
+<div class="col-md-5 col-md-offset-0 head_cont" id="head_menu">
+    <div class=" col-md-2 head_item"><h5>Initiations</h5></div>
+    <div class="col-md-2 head_item"><h5>Events</h5></div>
+    <div class="col-md-2 head_item"><h5>Blogs</h5></div>
+    <div class="col-md-4 head_btn"><button class="btn deposit">Payment center</button></div>
+</div>
+<div class="col-md-3 row head_cont" id="user_info">
+    <div class="col-md-4 head_item" ng-click="getManagerPanel()" ng-hide="current.user.role=='User'"><h6>Managment</h6></div>
+    <div class="col-md-4" ng-hide="current.user.role!='User'"></div>
+    <div class="col-md-5 head_item dropdown"><h6 class="dropdown-toggle" data-toggle="dropdown">Configuration <span class="glyphicon glyphicon-cog"></span></h6>
+    <ul class="dropdown-menu">
+        <li><a href="" ng-click="profileEdit()">Edit profile</a></li>
+        <li><a href="#" >My Filters</a></li>
+        <li ng-click="showProfile(current.user)"><a href="">My profile</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Preferences</a></li>
+        <li><a href="" ng-click="logout()">Logout</a></li>
+    </ul>
+    </div>
+    <div class="col-md-2">
+        <div class="block_my_photo_main">
+            <img ng-src-function="{{current.user.id}}" state="{{current.user.state}}" class="my_photo" ng-click="showProfile(current.user)">
+        </div>
+    </div>
+</div>

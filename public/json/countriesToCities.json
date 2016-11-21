@@ -1,0 +1,7 @@
+[
+  {"name":"USA","cities":["San Francisco","Los Angels","Washington","Alabama"]},
+  {"name":"Englang","cities":["London","Manchester","Liverpool","Oxford"]},
+  {"name":"Russia","cities":["Moscow","Saratov","Sankt-Peterburg","Voronezh"]},
+  {"name":"Ukraine","cities":["Kiyv","Kharkiv","Odessa","Lutsk"]},
+  {"name":"Spain","cities":["Valencia","Sevilla","Madrid","Barcelona"]}
+]

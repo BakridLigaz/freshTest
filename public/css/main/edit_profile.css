@@ -1,0 +1,28 @@
+.panel_edit{
+    border: none;
+}
+.title_edit{
+    background: #319dd4;
+    color: white;
+    text-align: center;
+}
+.label_btn_edit_form{
+    color: darkgray;
+    font-size: 0.7rem;
+}
+.label_edit_form{
+    color: darkgray;
+    font-size: 0.9rem;
+}
+.interests_table{
+    width: 96%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.td_int_table{
+    border: none;
+}
+.tr_int_table{
+    font-size: 15px;
+}

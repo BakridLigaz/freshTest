@@ -1,0 +1,29 @@
+/*Carousel*/
+.carousel-container{
+    background: #319dd4;
+    height: 200px;
+}
+.carousel-hider {
+    /*width: 80%;*/
+    /*background: #319dd4;*/
+    overflow: hidden;
+    float: left;
+}
+
+.carousel-list {
+    list-style: none;
+    width: 10000px;
+    padding: 0;
+    position: relative;
+}
+.carousel-element {
+    margin-top: 20px;
+    display: block;
+    margin-right: 25px;
+    float: left;
+}
+
+.carousel-element img {
+    width: 100px;
+    height: 150px;
+}

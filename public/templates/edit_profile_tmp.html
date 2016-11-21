@@ -1,0 +1,214 @@
+<div class="col-md-8 row photo_conteiner" id="edit_profile" >
+    <div class="col-md-6 col-sm-6">
+        <div class="col-md-12 col-sm-12 panel-group">
+            <div class="panel panel_edit">
+                <div class="panel-heading title_edit">PHOTOS</div>
+                <div class="panel-body row">
+                    <div class="col-md-6 col-sm-6 col-xs-6"><button class=" form-control btn-default" ng-click="getDownloadPage()"><label class="label_btn_edit_form">Change profile picture</label></button></div>
+                    <div class="col-md-6 col-sm-6 col-xs-6"><button class=" form-control btn-default" ng-click="addPhoto()"><label class="label_btn_edit_form">Edit my photo album</label></button></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 panel-group">
+            <div class="panel panel_edit">
+                <div class="panel-heading title_edit">PERSONAL INFORMATION</div>
+                <div class="panel-body row">
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">COUNTRY</label>
+                        <select class="form-control" ng-options="country.name for country in countryList" ng-model="current.user.country">
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">CITY</label>
+                        <select class="form-control" ng-options="city for city in current.user.country.cities" ng-model="current.user.city">
+                        </select>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <label class="label_edit_form">WHAT ARE YOU LOOKING FOR</label>
+                        <select class="form-control" ng-model="current.user.looking_for">
+                            <option></option>
+                            <option>Men</option>
+                            <option>Woman</option>
+                            <option>Chat</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <label class="label_edit_form">TITTLE PROFILE:</label>
+                        <input type="text" class="form-control" ng-model="current.user.title_profile"/>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <label class="label_edit_form">SHORT DESCRIPTION</label>
+                        <textarea class="form-control" ng-model="current.user.description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 panel-group">
+            <div class="panel panel_edit">
+                <div class="panel-heading title_edit">SOCIAL INFORMATION</div>
+                <div class="panel-body row">
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">CIVIL STATUS</label>
+                        <select class="form-control" ng-model="current.user.civil_status">
+                            <option></option>
+                            <option>Married</option>
+                            <option>Single</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">CHILDREN</label>
+                        <select class="form-control" ng-model="current.user.children">
+                            <option></option>
+                            <option>not</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>more 4</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">EDUCATION</label>
+                        <select class="form-control" ng-model="current.user.education">
+                            <option></option>
+                            <option>Basic</option>
+                            <option>Middle</option>
+                            <option>High</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">WORK</label>
+                        <select class="form-control" ng-model="current.user.work">
+                            <option></option>
+                            <option>Worker</option>
+                            <option>Student</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">RELIGION</label>
+                        <select class="form-control" ng-model="current.user.religion">
+                            <option></option>
+                            <option>not</option>
+                            <option>Christianity</option>
+                            <option>Atheism</option>
+                            <option>Catholicism</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">SMOKER</label>
+                        <select class="form-control" ng-model="current.user.smoker">
+                            <option></option>
+                            <option>no</option>
+                            <option>yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+        <div class="col-md-12 col-sm-12 panel-group">
+            <div class="panel panel_edit">
+                <div class="panel-heading title_edit">APPEARANCE</div>
+                <div class="panel-body row">
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">HEIGHT</label>
+                        <select class="form-control" ng-options="option for option in antrOptions.height" ng-model="current.user.height">
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">WEIGHT</label>
+                        <select class="form-control" ng-options="option for option in antrOptions.weight" ng-model="current.user.weight">
+                        </select>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <label class="label_edit_form">BUILD</label>
+                        <select class="form-control" ng-model="current.user.build">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">HAIR</label>
+                        <select class="form-control" ng-model="current.user.hair">
+                            <option></option>
+                            <option>Blonde</option>
+                            <option>Red</option>
+                            <option>Brown</option>
+                            <option>Black</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">EYES</label>
+                        <select class="form-control" ng-model="current.user.eyes">
+                            <option></option>
+                            <option>green</option>
+                            <option>blue</option>
+                            <option>brown</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">TATTOOS</label>
+                        <select class="form-control" ng-model="current.user.tattoos">
+                            <option></option>
+                            <option>no</option>
+                            <option>yes</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label class="label_edit_form">PIERCING</label>
+                        <select class="form-control" ng-model="current.user.piercing">
+                            <option></option>
+                            <option>no</option>
+                            <option>yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 panel-group">
+            <div class="panel panel_edit">
+                <div class="panel-heading title_edit">INTERESTS</div>
+                <div class="panel-body row">
+                    <table class="table table-striped interests_table">
+                        <tbody>
+                        <tr class="tr_int_table">
+                            <td class="td_int_table"><div>Animals<input type="checkbox" class="pull-right" ng-model="current.user.animals"></div></td>
+                        </tr>
+                        <tr class="tr_int_table">
+                            <td><div>Go to cultural events<input type="checkbox" class="pull-right" ng-model="current.user.go_to_cultural_events"></div></td>
+                        </tr>
+                        <tr class="tr_int_table">
+                            <td><div>Go to concerts<input type="checkbox" class="pull-right" ng-model="current.user.go_to_concerts"></div></td>
+                        </tr>
+                        <tr class="tr_int_table">
+                            <td><div>Healthy food<input type="checkbox" class="pull-right" ng-model="current.user.healthy_food"></div></td>
+                        </tr>
+                        <tr class="tr_int_table">
+                            <td><div>Do sport<input type="checkbox" class="pull-right" ng-model="current.user.do_sport"></div></td>
+                        </tr>
+                        <tr class="tr_int_table">
+                            <td><div>Travel<input type="checkbox" class="pull-right" ng-model="current.user.travel"></div></td>
+                        </tr>
+                        <tr class="tr_int_table">
+                            <td><div>Go dancing<input type="checkbox" class="pull-right" ng-model="current.user.go_dancing"></div></td>
+                        </tr>
+                        <tr class="tr_int_table">
+                            <td><div>Go to the movies<input type="checkbox" class="pull-right" ng-model="current.user.go_to_movies"></div></td>
+                        </tr>
+                        <tr class="tr_int_table">
+                            <td><div>Music<input type="checkbox" class="pull-right" ng-model="current.user.music"></div></td>
+                        </tr>
+                        <tr class="tr_int_table">
+                            <td><div>Go out to dinner<input type="checkbox" class="pull-right" ng-model="current.user.go_out_to_dinner"></div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12"><button class="btn btn-success form-control" ng-click="saveProfile(current.user)">save</button> </div>
+    </div>
+</div>

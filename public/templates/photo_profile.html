@@ -1,0 +1,46 @@
+<div class="col-md-8 row photo_conteiner" id="change_photo_profile" ng-hide="download">
+    <div class="col-md-12 col-sm-12 panel-group">
+        <div class="panel panel_edit">
+            <div class="panel-heading title_edit_photo_profile">PHOTO PROFILE</div>
+            <div class="container_body_photo_edit">
+                <div style="padding: 1rem">Follow these tips to choose a good profile photo<span class="glyphicon glyphicon-remove pull-right"></span></div>
+            </div>
+            <div class="panel-body row">
+                <ul style="padding: 0">
+                    <li class="photo_createry"><span class="glyphicon glyphicon-ok-sign span_ok"></span> Your face should be clearly visible in your photo.</li>
+                    <li class="photo_createry"><span class="glyphicon glyphicon-ok-sign span_ok"></span> Ideally showing from the chest up.</li>
+                    <li class="photo_createry"><span class="glyphicon glyphicon-ok-sign span_ok"></span> Try that your photo does not contain graphics or other effects.</li>
+                    <li class="photo_createry"><span class="glyphicon glyphicon-ok-sign span_ok"></span> You must appear alone in your photo.</li>
+                </ul>
+                <div class="col-md-12 col-sm-12 col-xs-12 btn_find"><button class=" form-control btn-success" ng-custom-file-chooser ng-click="downloadProfilePicture()"><span class="glyphicon glyphicon-search"></span> FIND PHOTO</button></div>
+                <input type="file" id="hidenInput" style="display: none" ngf-select ng-model="pic" name="pic" ngf-resize="{width: 400, height:400 }" accept="image/*"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-8 row photo_conteiner" id="edit_photo_profile" ng-show="download">
+    <div class="col-md-12 col-sm-12 panel-group">
+        <div class="panel panel_edit" id="photoedit_conteiner">
+            <div class="panel-heading title_edit_photo_profile">EDIT PHOTO PROFILE</div>
+            <div class="container_body_photo_edit">
+                <div style="padding: 1rem">Try to leave to face lomas centered and clear prosible within the picture<span class="glyphicon glyphicon-remove pull-right"></span></div>
+            </div>
+            <div class="panel-body row">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                        <img ngf-thumbnail="pic" class="edit_image thumb">
+                    </div>
+                    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 row btn_group_edit_photo">
+                        <div class="col-md-1 col-md-offset-3 col-sm-1 col-sm-offset-3 col-xs-1 col-xs-offset-3"><button class="btn btn_edit_photo"><span class="glyphicon glyphicon-search"></span></button></div>
+                        <div class="col-md-1 col-sm-1 col-xs-1"><button class="btn btn_edit_photo"><span class="glyphicon glyphicon-repeat"></span></button></div>
+                        <div class="col-md-1 col-sm-1 col-xs-1"><button class="btn btn_edit_photo "><span class="glyphicon glyphicon-zoom-out"></span></span></button></div>
+                        <div class="col-md-1 col-sm-1 col-xs-1"><button class="btn btn_edit_photo "><span class="glyphicon glyphicon-zoom-in"></span></button></div>
+                        <div class="col-md-1 col-sm-1 col-xs-1"><button class="btn btn_edit_photo "><span class="glyphicon glyphicon-move"></span></button></div>
+                        <div class="col-md-1 col-sm-1 col-xs-1"><button class="btn btn_edit_photo "><span class="glyphicon glyphicon-repeat"></span></button></div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12"><button class=" form-control btn-success" ng-click="changeProfilePicture(pic)"><span class="glyphicon glyphicon-open"></span> Change profile picture</button></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+{
+  "port":8080,
+  "postgresql":{
+  "database":"test_db",
+    "user":"postgres",
+    "password":"ligaz2403"
+}
+}

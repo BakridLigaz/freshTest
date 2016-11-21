@@ -1,0 +1,27 @@
+<div class="row photo_conteiner col-md-8">
+    <div class="col-md-3"><span class="glyphicon glyphicon-chevron-left"></span> Edit album</div>
+    <div class="clearfix"></div>
+    <div class="col-md-4">
+        <h3>Photo in album (3)</h3>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-md-4">
+        <p>Select photo</p>
+        <input type="file" ngf-select ng-model="picFiles" name="picFile" accept="image/*" multiple>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-md-3 col-md-offset-7 btn_save_changes">
+        <button class="btn btn-success">Save changes</button>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-md-12">
+        <ul class="list-inline">
+            <li ng-repeat="pic in picFiles">
+                <div><img ngf-thumbnail="pic" class="thumb">
+                    <a ><span ng-click="picFiles.splice(picFiles.indexOf(pic),1)" ng-show="pic" class="glyphicon glyphicon-trash photo_icon_trash"></span></a>
+                    <a><span class="glyphicon glyphicon-repeat photo_icon_reverse"></span></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
